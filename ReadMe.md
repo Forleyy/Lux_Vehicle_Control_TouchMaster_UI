@@ -42,27 +42,28 @@ while park_kill ~= nil do
 if ( state_lxsiren[veh] ~= proposed_tone or state_lxsiren[veh] == 0 ) then
 
 --Place this code after..
-
+`
   HUD:SetItemState("siren", true)
-
+`
 
 -- Now go to the line 244 and search the line
 count_bcast_timer = delay_bcast_timer
 else
 
 -- Add this after else
-
+`
 if state_pwrcall[veh] == 0 then
     HUD:SetItemState("lft", false)
 end
-
+`
 
 --Now search for
 HUD:SetItemState("switch", false)  -- Near line 600
 
 --and add this after
+`
 HUD:SetItemState("lft", false)
-
+`
 
 
 
@@ -72,7 +73,7 @@ HUD:SetItemState("lft", false)
 
 
 --Now go near the line 660 and search for
-
+`
 elseif IsDisabledControlJustReleased(0, 172) and not IsMenuOpen() then
   if state_pwrcall[veh] == 0 then
     if IsVehicleSirenOn(veh) then
@@ -91,9 +92,9 @@ elseif IsDisabledControlJustReleased(0, 172) and not IsMenuOpen() then
   SetActivityTimer()
   count_bcast_timer = delay_bcast_timer
 end
-
+`
 And replace with :
-
+`
 elseif IsDisabledControlJustReleased(0, 172) and not IsMenuOpen() then
   if state_pwrcall[veh] == 0 then
     if IsVehicleSirenOn(veh) then
@@ -113,11 +114,11 @@ elseif IsDisabledControlJustReleased(0, 172) and not IsMenuOpen() then
   SetActivityTimer()
   count_bcast_timer = delay_bcast_timer
 end
-
+`
 
 Just after search for
 
-
+`
 if state_lxsiren[veh] > 0 then
   if IsDisabledControlJustReleased(0, 80) then
     PlayAudio("Upgrade", upgrade_volume)
@@ -128,11 +129,11 @@ if state_lxsiren[veh] > 0 then
     HUD:SetItemState("horn", true)
   end
 end
-
+`
 
 And replace it with
 
-
+`
 if state_lxsiren[veh] > 0 then
   if IsDisabledControlJustReleased(0, 80) then
     PlayAudio("Upgrade", upgrade_volume)
@@ -146,7 +147,7 @@ if state_lxsiren[veh] > 0 then
   end
 end
 
-
+`
 
 
 
