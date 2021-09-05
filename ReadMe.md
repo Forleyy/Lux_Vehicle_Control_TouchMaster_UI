@@ -1,3 +1,6 @@
+<img>https://i.imgur.com/GSGg6DA.jpeg</img>
+
+
 Hello !
 
 I'll explain you how to plugins_installed
@@ -31,40 +34,43 @@ Replace the Util/cl_lvc.lua with mine OR Read this for put the code needed to th
 while park_kill or park_kill_masterswitch do
 
 --This code
-
+<code>
 while park_kill ~= nil do
        HUD:SetItemState("rls", park_kill)
        Citizen.Wait(1000)
      end
-
+</code>
  -- Now go to the line 241 and search for
-
+<code>
 if ( state_lxsiren[veh] ~= proposed_tone or state_lxsiren[veh] == 0 ) then
-
+</code>
 --Place this code after..
-
+<code>
   HUD:SetItemState("siren", true)
-
+</code>
 
 -- Now go to the line 244 and search the line
+<code>
 count_bcast_timer = delay_bcast_timer
 else
+</code>
 
 -- Add this after else
-
+<code>
 if state_pwrcall[veh] == 0 then
     HUD:SetItemState("lft", false)
 end
-
+</code>
 
 --Now search for
+<code>
 HUD:SetItemState("switch", false)  -- Near line 600
-
+</code>
 --and add this after
-
+<code>
 HUD:SetItemState("lft", false)
 
-
+</code>
 
 
 
@@ -73,7 +79,7 @@ HUD:SetItemState("lft", false)
 
 
 --Now go near the line 660 and search for
-
+<code>
 elseif IsDisabledControlJustReleased(0, 172) and not IsMenuOpen() then
   if state_pwrcall[veh] == 0 then
     if IsVehicleSirenOn(veh) then
@@ -92,11 +98,11 @@ elseif IsDisabledControlJustReleased(0, 172) and not IsMenuOpen() then
   SetActivityTimer()
   count_bcast_timer = delay_bcast_timer
 end
-
+</code>
 And replace with :
 
 
-
+<code>
 elseif IsDisabledControlJustReleased(0, 172) and not IsMenuOpen() then
   if state_pwrcall[veh] == 0 then
     if IsVehicleSirenOn(veh) then
@@ -116,7 +122,7 @@ elseif IsDisabledControlJustReleased(0, 172) and not IsMenuOpen() then
   SetActivityTimer()
   count_bcast_timer = delay_bcast_timer
 end
-
+</code>
 
 
 
@@ -124,7 +130,7 @@ Just after search for
 
 
 
-
+<code>
 if state_lxsiren[veh] > 0 then
   if IsDisabledControlJustReleased(0, 80) then
     PlayAudio("Upgrade", upgrade_volume)
@@ -135,13 +141,13 @@ if state_lxsiren[veh] > 0 then
     HUD:SetItemState("horn", true)
   end
 end
-
+</code>
 
 
 
 And replace it with
 
-
+<code>
 if state_lxsiren[veh] > 0 then
   if IsDisabledControlJustReleased(0, 80) then
     PlayAudio("Upgrade", upgrade_volume)
@@ -154,7 +160,7 @@ if state_lxsiren[veh] > 0 then
     HUD:SetItemState("aux2", true)  -- And add this
   end
 end
-
+</ode>
 
 
 
