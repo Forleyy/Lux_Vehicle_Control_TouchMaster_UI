@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+	float: right;
+    right: 260px;
+    top: 150px;
+}
+
+.button {
+    margin-right: -3px;
+}
+
+#buttonboxTKD {
+	display: grid;
+	grid-template-areas: 'tkd';
+	position: absolute;
+	float: right;
+    right: 245px;
+    top: 74px;
+	z-index: 900;
+}
+
+#buttonboxAux1 {
+	display: grid;
+	grid-template-areas: 'aux1';
+	position: absolute;
+	float: right;
+    right: 170px;
+    top: 74px;
+	z-index: 900;
+}
+#buttonboxAux2 {
+	display: grid;
+	grid-template-areas: 'aux2';
+	position: absolute;
+	float: right;
+    right: 100px;
+    top: 74px;
+	z-index: 900;
+}
+
+#buttonboxLFT {
+	display: grid;
+	grid-template-areas: 'LFT';
+	position: absolute;
+	float: right;
+    right: 380px;
+    top: 74px;
+	z-index: 900;
+}
+
+#buttonboxRT {
+	display: grid;
+	grid-template-areas: 'rt';
+	position: absolute;
+	float: right;
+    right: 310px;
+    top: 74px;
+	z-index: 900;
+}
+
+
+#buttonboxRLS {
+	display: grid;
+	grid-template-areas: 'rls';
+	position: absolute;
+	float: right;
+    right: 30px;
+    top: 74px;
+	z-index: 900;
+}
+
+
+#buttonboxHorn {
+	display: grid;
+	grid-template-areas: 'horn';
+	position: absolute;
+	float: right;
+    right: 362px;
+    top: 158px;
+	z-index: 900;
+}
+
+#buttonboxMan {
+	display: grid;
+	grid-template-areas: 'siren';
+	position: absolute;
+	float: right;
+    right: 230px;
+    top: 165px;
+	z-index: 900;
+}
+
+#buttonboxLock {
+	display: grid;
+	grid-template-areas: 'lock';
+	position: absolute;
+	float: right;
+    right: 612px;
+    top: 58px;
+	z-index: 900;
+}
+
+#buttonboxSlide {
+  display: grid;
+	grid-template-areas: 'slide';
+	position: absolute;
+	float: right;
+    right: 433px;
+    top: 150px;
+	z-index: 999;
+}
+
+#sirenbox {
+	display: none;
+	position: absolute;
+	overflow: hidden;
+	width: 700px;
+	height: 280px;
+	left: 0%;
+	top: 68%;
+	transform-origin: left top;
+	transform: scale(0.6);
+	background-image: url("../textures/touchmaster_background_withlocktext.png");
+}
