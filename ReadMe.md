@@ -94,6 +94,8 @@ elseif IsDisabledControlJustReleased(0, 172) and not IsMenuOpen() then
 end
 `
 And replace with :
+
+
 `
 elseif IsDisabledControlJustReleased(0, 172) and not IsMenuOpen() then
   if state_pwrcall[veh] == 0 then
@@ -116,7 +118,11 @@ elseif IsDisabledControlJustReleased(0, 172) and not IsMenuOpen() then
 end
 `
 
+
+
 Just after search for
+
+
 
 `
 if state_lxsiren[veh] > 0 then
@@ -131,18 +137,20 @@ if state_lxsiren[veh] > 0 then
 end
 `
 
+
+
 And replace it with
 
 `
 if state_lxsiren[veh] > 0 then
   if IsDisabledControlJustReleased(0, 80) then
     PlayAudio("Upgrade", upgrade_volume)
---		HUD:SetItemState("horn", false) -- or Comment this
+  --HUD:SetItemState("horn", false) or Comment this
     HUD:SetItemState("aux2", false) -- And add this
     SetLxSirenStateForVeh(veh, UTIL:GetNextSirenTone(state_lxsiren[veh], veh, true))
     count_bcast_timer = delay_bcast_timer
   elseif IsDisabledControlPressed(0, 80) then
---		HUD:SetItemState("horn", true) -- And Comment this
+--HUD:SetItemState("horn", true) - And Comment this
     HUD:SetItemState("aux2", true)  -- And add this
   end
 end
