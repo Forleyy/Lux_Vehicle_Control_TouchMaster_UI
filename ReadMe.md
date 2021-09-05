@@ -124,8 +124,8 @@ Just after search for
 
 
 
-`
-if state_lxsiren[veh] > 0 then
+
+`if state_lxsiren[veh] > 0 then
   if IsDisabledControlJustReleased(0, 80) then
     PlayAudio("Upgrade", upgrade_volume)
     HUD:SetItemState("horn", false)
@@ -134,15 +134,15 @@ if state_lxsiren[veh] > 0 then
   elseif IsDisabledControlPressed(0, 80) then
     HUD:SetItemState("horn", true)
   end
-end
-`
+end`
+
 
 
 
 And replace it with
 
-`
-if state_lxsiren[veh] > 0 then
+
+`if state_lxsiren[veh] > 0 then
   if IsDisabledControlJustReleased(0, 80) then
     PlayAudio("Upgrade", upgrade_volume)
   --HUD:SetItemState("horn", false) or Comment this
@@ -153,9 +153,9 @@ if state_lxsiren[veh] > 0 then
 --HUD:SetItemState("horn", true) - And Comment this
     HUD:SetItemState("aux2", true)  -- And add this
   end
-end
+end`
 
-`
+
 
 
 
