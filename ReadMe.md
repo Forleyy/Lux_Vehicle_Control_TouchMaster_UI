@@ -24,11 +24,32 @@ First choose if you want the background with or withtout  the fictive "Lock" tex
 
 Now just Save the the old "UI" folder, and replace it with the mine.
 
+Replace your files  in FxManifest.lua  by : 
+
+   files({
+    'UI/html/index.html',
+    'UI/html/lvc.js',
+    'UI/html/style.css',
+	'UI/sounds/*.ogg',
+	'UI/sounds/**/*.ogg',
+	'UI/textures/**/**/*.png',
+	'UI/textures/fedtouchmaster/Master/*.png',
+	'UI/textures/fedtouchmaster/On/*.png',
+	'UI/textures/fedtouchmaster/Off/*.png',
+	'UI/textures/**/*.gif',
+	'PLUGINS/**/*.json'
+})
+
+
+
 If you want see all feature work
 
 Replace the Util/cl_lvc.lua with mine OR Read this for put the code needed to the right place (Very Easy)
+       
 
 
+
+              
 -- Go to the line 118
 -- And place after :
 while park_kill or park_kill_masterswitch do
